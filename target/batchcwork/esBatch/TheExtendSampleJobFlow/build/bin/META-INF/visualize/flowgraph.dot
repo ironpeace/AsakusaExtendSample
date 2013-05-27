@@ -1,0 +1,11 @@
+digraph {
+    "933d299e-d4ba-4b05-bae0-be39e0e0d284" [shape=box, label="@Extend\nextend"];
+    "058e8bae-d305-4d05-96aa-85f6442611e0" [shape=invhouse, label="result"];
+    "edd402eb-7fb1-4916-9cbe-d352b4dbefec" [shape=point];
+    "6a8d516f-26e5-4e29-a789-6e2998573495" [shape=box, label="@Convert\nExtendSampleOperator.convertedResult"];
+    "c4d433dc-65a1-47c9-88c4-ed1286685568" [shape=invhouse, label="orignaldata"];
+    "933d299e-d4ba-4b05-bae0-be39e0e0d284" -> "6a8d516f-26e5-4e29-a789-6e2998573495" [label="out>pre"];
+    "6a8d516f-26e5-4e29-a789-6e2998573495" -> "edd402eb-7fb1-4916-9cbe-d352b4dbefec" [label="original>in"];
+    "6a8d516f-26e5-4e29-a789-6e2998573495" -> "058e8bae-d305-4d05-96aa-85f6442611e0" [label="out>port"];
+    "c4d433dc-65a1-47c9-88c4-ed1286685568" -> "933d299e-d4ba-4b05-bae0-be39e0e0d284" [label="port>in"];
+}

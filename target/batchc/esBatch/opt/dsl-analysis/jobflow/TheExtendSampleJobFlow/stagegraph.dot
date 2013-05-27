@@ -1,0 +1,19 @@
+digraph {
+    subgraph "cluster_09d8aa17-bae7-4884-b67a-b226d1103e93" {
+        label = "(source)";
+        "2d04bbd2-71e7-4e68-94e5-61f2d964c62e" [shape=invhouse, label="orignaldata"];
+    }
+    subgraph "cluster_bafdb30e-8436-4450-a487-0bfbb6b6f194" {
+        label = "(sink)";
+        "a02bb79e-95b1-457b-9d7f-3f085587f81c" [shape=invhouse, label="result"];
+    }
+    subgraph "cluster_95ff3be3-c72d-4e46-9cb2-bdb7ba9dfe3e" {
+        label = "stage0001";
+        style = bold;
+        "1648efac-3b67-4e6c-b334-bff90880d765" [shape=box, label="@Extend\nextend"];
+        "7cf1e2d6-0ab7-4bd1-9837-6322d5cddd81" [shape=box, label="@Convert\nExtendSampleOperator.convertedResult"];
+    }
+    "2d04bbd2-71e7-4e68-94e5-61f2d964c62e" -> "1648efac-3b67-4e6c-b334-bff90880d765" [label="port>in"];
+    "7cf1e2d6-0ab7-4bd1-9837-6322d5cddd81" -> "a02bb79e-95b1-457b-9d7f-3f085587f81c" [label="out>port"];
+    "1648efac-3b67-4e6c-b334-bff90880d765" -> "7cf1e2d6-0ab7-4bd1-9837-6322d5cddd81" [label="out>pre"];
+}

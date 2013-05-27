@@ -1,0 +1,11 @@
+batch: esBatch
+flow: TheExtendSampleJobFlow
+    input:
+        orignaldata (ironpeace.jobflow.OriginaldataFromCsv)
+    output:
+        result (ironpeace.jobflow.ResultToCsv)
+    flow: ironpeace.jobflow.ExtendSampleJobFlow
+        operator: com.asakusafw.vocabulary.flow.util.CoreOperatorFactory$Extend#toString([])[]
+        output: OutputDescription{name=result, type=class ironpeace.modelgen.dmdl.model.Result}
+        input: InputDescription{name=orignaldata, type=class ironpeace.modelgen.dmdl.model.OriginalData}
+        operator: ironpeace.operator.ExtendSampleOperator#convertedResult([class ironpeace.modelgen.dmdl.model.PreResult])[]

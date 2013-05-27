@@ -1,0 +1,14 @@
+digraph {
+    rankdir = LR;
+    "bdfd926a-3ee4-4975-b5be-3b07d87c4928" [shape=box, label="Batch\nesBatch"];
+    "46f8f99b-a434-4edf-9598-34c7410db5c0" [shape=box, label="JobFlow\nTheExtendSampleJobFlow"];
+    "4d265c0f-a549-4da0-973a-1234b58d233a" [shape=box, label="Stage\nironpeace.batchapp.esBatch.theExtendSampleJobFlow.stage0001.StageClient"];
+    "27b457a9-682e-45e1-ae69-915a802a5ed1" [shape=box, label="Mapper\nironpeace.batchapp.esBatch.theExtendSampleJobFlow.stage0001.StageMapper1"];
+    "4d265c0f-a549-4da0-973a-1234b58d233a" -> "27b457a9-682e-45e1-ae69-915a802a5ed1";
+    "7a485bb0-d9e2-4c66-b6c3-ef5f8dc9657b" [shape=box, label="Fragment\nironpeace.batchapp.esBatch.theExtendSampleJobFlow.stage0001.MapFragment1"];
+    "d5ccff1b-f7c5-41c8-89e6-50f5e88a68b9" [shape=box, label="Convert\nExtendSampleOperator#convertedResult"];
+    "7a485bb0-d9e2-4c66-b6c3-ef5f8dc9657b" -> "d5ccff1b-f7c5-41c8-89e6-50f5e88a68b9";
+    "27b457a9-682e-45e1-ae69-915a802a5ed1" -> "7a485bb0-d9e2-4c66-b6c3-ef5f8dc9657b";
+    "46f8f99b-a434-4edf-9598-34c7410db5c0" -> "4d265c0f-a549-4da0-973a-1234b58d233a";
+    "bdfd926a-3ee4-4975-b5be-3b07d87c4928" -> "46f8f99b-a434-4edf-9598-34c7410db5c0";
+}
